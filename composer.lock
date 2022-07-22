@@ -1,0 +1,377 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9a312733abffd35d887ae0dc40acd06c",
+    "packages": [
+        {
+            "name": "sop/asn1",
+            "version": "4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sop/asn1.git",
+                "reference": "074efe8f7c353c54edc809ac3d74efda83edd776"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sop/asn1/zipball/074efe8f7c353c54edc809ac3d74efda83edd776",
+                "reference": "074efe8f7c353c54edc809ac3d74efda83edd776",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sop\\ASN1\\": "lib/ASN1/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library for X.690 ASN.1 DER encoding and decoding.",
+            "homepage": "https://github.com/sop/asn1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "x.690",
+                "x690"
+            ],
+            "support": {
+                "issues": "https://github.com/sop/asn1/issues",
+                "source": "https://github.com/sop/asn1/tree/4.1.1"
+            },
+            "time": "2022-02-17T07:08:51+00:00"
+        },
+        {
+            "name": "sop/crypto-encoding",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sop/crypto-encoding.git",
+                "reference": "07537353e1b0e76c382a58a9c6e041b7c7dc9052"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sop/crypto-encoding/zipball/07537353e1b0e76c382a58a9c6e041b7c7dc9052",
+                "reference": "07537353e1b0e76c382a58a9c6e041b7c7dc9052",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sop\\CryptoEncoding\\": "lib/CryptoEncoding/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP implementation of textual encodings of cryptographic structures.",
+            "homepage": "https://github.com/sop/crypto-encoding",
+            "keywords": [
+                "Private Key",
+                "certificate",
+                "pem",
+                "public key"
+            ],
+            "support": {
+                "issues": "https://github.com/sop/crypto-encoding/issues",
+                "source": "https://github.com/sop/crypto-encoding/tree/master"
+            },
+            "time": "2019-05-22T11:46:12+00:00"
+        },
+        {
+            "name": "webmasterskaya/crypto-bridge",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmasterskaya/crypto-bridge.git",
+                "reference": "2cb151586459a2ae502c763758eb170876056234"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmasterskaya/crypto-bridge/zipball/2cb151586459a2ae502c763758eb170876056234",
+                "reference": "2cb151586459a2ae502c763758eb170876056234",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">=7.2",
+                "webmasterskaya/crypto-types": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webmasterskaya\\CryptoBridge\\": "lib/CryptoBridge/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Artem Vasilev",
+                    "email": "kern.usr@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library providing cryptography support for various PKCS applications.",
+            "homepage": "https://github.com/webmasterskaya/crypto-bridge",
+            "keywords": [
+                "cryptography",
+                "decrypt",
+                "encrypt",
+                "pkcs",
+                "sign",
+                "verify"
+            ],
+            "support": {
+                "source": "https://github.com/webmasterskaya/crypto-bridge/tree/master"
+            },
+            "time": "2021-04-15T18:58:25+00:00"
+        },
+        {
+            "name": "webmasterskaya/crypto-types",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmasterskaya/crypto-types.git",
+                "reference": "4f53314dd6b06563a02919ab982922a1d1631385"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmasterskaya/crypto-types/zipball/4f53314dd6b06563a02919ab982922a1d1631385",
+                "reference": "4f53314dd6b06563a02919ab982922a1d1631385",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "php": ">=7.2",
+                "sop/asn1": "^4.0.0",
+                "sop/crypto-encoding": "^0.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webmasterskaya\\CryptoTypes\\": "lib/CryptoTypes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Artem Vasilev",
+                    "email": "kern.usr@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library of various ASN.1 types for cryptographic applications.",
+            "homepage": "https://github.com/webmasterskaya/crypto-types",
+            "keywords": [
+                "Private Key",
+                "algorithm identifier",
+                "asn1",
+                "cryptography",
+                "ec",
+                "public key",
+                "rsa",
+                "signature"
+            ],
+            "support": {
+                "source": "https://github.com/webmasterskaya/crypto-types/tree/0.3.1"
+            },
+            "time": "2021-04-15T18:12:54+00:00"
+        },
+        {
+            "name": "webmasterskaya/x501",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmasterskaya/x501.git",
+                "reference": "14a447cad78b87462610aa33294fb8643cec9404"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmasterskaya/x501/zipball/14a447cad78b87462610aa33294fb8643cec9404",
+                "reference": "14a447cad78b87462610aa33294fb8643cec9404",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2",
+                "sop/asn1": "^4.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webmasterskaya\\X501\\": "lib/X501/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Artem Vasilev",
+                    "email": "kern.usr@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library for X.501 ASN.1 types, X.520 attributes and DN parsing.",
+            "homepage": "https://github.com/webmasterskaya/x501",
+            "keywords": [
+                "attribute",
+                "dn",
+                "ldap",
+                "rdn",
+                "x.501",
+                "x.520",
+                "x501",
+                "x520"
+            ],
+            "support": {
+                "source": "https://github.com/webmasterskaya/x501/tree/master"
+            },
+            "time": "2021-04-15T22:31:31+00:00"
+        },
+        {
+            "name": "webmasterskaya/x509",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmasterskaya/x509.git",
+                "reference": "bdc62862e8e1239d7f499c92a691e8be788bd338"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmasterskaya/x509/zipball/bdc62862e8e1239d7f499c92a691e8be788bd338",
+                "reference": "bdc62862e8e1239d7f499c92a691e8be788bd338",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "php": ">=7.2",
+                "sop/asn1": "^4.0.0",
+                "sop/crypto-encoding": "^0.3.0",
+                "webmasterskaya/crypto-bridge": "dev-master",
+                "webmasterskaya/crypto-types": "dev-master",
+                "webmasterskaya/x501": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webmasterskaya\\X509\\": "lib/X509/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Artem Vasilev",
+                    "email": "kern.usr@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library for X.509 public key certificates, attribute certificates, certification requests and certification path validation.",
+            "homepage": "https://github.com/webmasterskaya/x509",
+            "keywords": [
+                "ac",
+                "attribute certificate",
+                "certificate",
+                "certification request",
+                "csr",
+                "x.509",
+                "x509"
+            ],
+            "support": {
+                "source": "https://github.com/webmasterskaya/x509/tree/master"
+            },
+            "time": "2021-04-15T21:39:49+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "webmasterskaya/x509": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

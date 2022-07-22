@@ -1,0 +1,8 @@
+{
+  "require": {
+    "sop/asn1": "^4.1",
+    "webmasterskaya/x509": "dev-master"
+  },
+
+  "minimum-stability": "dev"
+}
