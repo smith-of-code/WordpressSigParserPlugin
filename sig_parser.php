@@ -134,13 +134,22 @@ class sigParserPlugin
                 }
 
 //        var_dump($cert->tbsCertificate());
-                $result = 'Директор: '.$sig_array['sn'].' '.$sig_array['givenName'] . PHP_EOL.
+                $name = '';
+
+            if (!empty($sig_array['sn'])){
+                $name = $sig_array['sn'].' '.$sig_array['givenName'];
+            }else{
+                $name = $sig_array['cn'];
+            }
+
+
+                $result = 'Директор: '. $name . PHP_EOL.
                         'Подписанно: '. $lastModifiedDate . PHP_EOL.
                         'Серийный номер: '.$cert->tbsCertificate()->serialNumber() . PHP_EOL;
 //        echo $sig_array['title'].':'.$sig_array['o']
             }
         }
-
+//        $result = json_encode($sig_array,JSON_UNESCAPED_UNICODE);
         return $result;
     }
 }
