@@ -71,7 +71,7 @@ class sigParserPlugin
 
 
     public function sig_pdf_func($atts){
-        return '<img title="'.$this->get_sig_info($atts['url']).'" src="'.plugin_dir_url(__FILE__).'/img/ECP.png"><a href="'.$atts['url'].'">'.$atts['title'].'</a>';
+        return '<a href="'.$atts['url'].'">'.$atts['title'].'</a><img title="'.$this->get_sig_info($atts['url']).'" src="'.plugin_dir_url(__FILE__).'/img/ECP.png">';
     }
 
     protected function get_sig_info($path=null){
