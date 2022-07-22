@@ -73,10 +73,10 @@ class sigParserPlugin {
 
 		$sql = "CREATE TABLE $table_name (
 		 id int(11) NOT NULL AUTO_INCREMENT,
-		 url text DEFAULT NULL,
-		 owner_name text DEFAULT NULL,
+		 url Ntext DEFAULT NULL,
+		 owner_name Ntext DEFAULT NULL,
 		 create_date text DEFAULT NULL,
-		 serial_number text DEFAULT NULL,
+		 serial_number Ntext DEFAULT NULL,
 		 UNIQUE KEY id (id)
 		 );";
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
