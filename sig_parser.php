@@ -11,19 +11,17 @@ use Webmasterskaya\X509\Certificate\Certificate;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+register_uninstall_hook( __FILE__, array( 'sigParserPlugin', 'drop_plugin_tables' ) );
 
 class sigParserPlugin {
 
-	protected string $table_name = 'sig_parser';
+	public static string $table_name = 'sig_parser';
 
 	public function __construct() {
+
 		$this->register_hooks();
 		$this->register_shortcodes();
 		$this->disableGutenberg();
-	}
-
-	private function register_shortcodes() {
-		add_shortcode( 'sig_pdf', array( $this, 'sig_pdf_func' ) );
 	}
 
 	private function register_hooks() {
@@ -31,9 +29,10 @@ class sigParserPlugin {
 
 		register_activation_hook( __FILE__, array( $this, 'create_plugin_tables' ) );
 
-		register_uninstall_hook( __FILE__, array($this,'drop_plugin_tables'));
+	}
 
-
+	private function register_shortcodes() {
+		add_shortcode( 'sig_pdf', array( $this, 'sig_pdf_func' ) );
 	}
 
 	private function disableGutenberg() {
@@ -69,25 +68,25 @@ class sigParserPlugin {
 	public function create_plugin_tables() {
 		global $wpdb;
 		// префикс текущего сайта
-		$table_name = $wpdb->prefix . $this->table_name;
+		$table_name = $wpdb->prefix . self::$table_name;
 
 		$sql = "CREATE TABLE $table_name (
 		 id int(11) NOT NULL AUTO_INCREMENT,
-		 url Ntext DEFAULT NULL,
-		 owner_name Ntext DEFAULT NULL,
+		 url text DEFAULT NULL,
+		 owner_name text DEFAULT NULL,
 		 create_date text DEFAULT NULL,
-		 serial_number Ntext DEFAULT NULL,
+		 serial_number text DEFAULT NULL,
 		 UNIQUE KEY id (id)
 		 );";
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
 	}
 
-	public function drop_plugin_tables()
+	public static function drop_plugin_tables()
 	{
 		//drop a custom db table
 		global $wpdb;
-		$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . $this->table_name );
+		$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . self::$table_name );
 	}
 
 	// В этом функции указываем ссылку на JavaScript-файл кнопки
@@ -118,7 +117,7 @@ class sigParserPlugin {
 		}
 
 		global $wpdb;
-		$table_name = $wpdb->prefix . $this->table_name;
+		$table_name = $wpdb->prefix . self::$table_name;
 
 
 		$row = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM ' . $table_name . ' WHERE url = %d', $path ) );
