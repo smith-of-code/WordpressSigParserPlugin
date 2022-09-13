@@ -109,7 +109,6 @@ class sigParserPlugin {
 	}
 
 	protected function get_sig_info( $path = null ) {
-
 		$result_text = '';
 
 		if ( is_null( $path ) ) {
@@ -120,7 +119,7 @@ class sigParserPlugin {
 		$table_name = $wpdb->prefix . self::$table_name;
 
 
-		$row = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM ' . $table_name . ' WHERE url = %d', $path ) );
+		$row = $wpdb->get_row( "SELECT * FROM $table_name WHERE url = '$path'" );
 
 		if ( ! empty( $row ) ) {
 			$result_text = 'Директор: ' . $row->owner_name . PHP_EOL .
